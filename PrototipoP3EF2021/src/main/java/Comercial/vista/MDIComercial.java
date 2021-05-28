@@ -23,14 +23,14 @@ import seguridad.dominio.Bitacora;
  */
 public class MDIComercial extends javax.swing.JFrame {
 
-    private MantenimientoProductos formModulos;
-    private MantenimientoProductos MantenimientoProductos;
-    private Mantenimiento_Cliente Mantenimiento_Cliente;
-    private Mantenimiento_Deudores Mantenimiento_Acreedor;
+   //private MantenimientoProductos formModulos;
+   // private MantenimientoProductos MantenimientoProductos;
+   // private Mantenimiento_Cliente Mantenimiento_Cliente;
+    //private Mantenimiento_Deudores Mantenimiento_Acreedor;
     private seguridad.vista.FmrBitacora FmrBitacora;
     private MantenimientoProveedor MantenimientoProveedor;
-    private Proceso_Factura Proceso_Factura;
-    private MantenimientoBodega MantenimientoBodega;
+ //   private Proceso_Factura Proceso_Factura;
+    //private MantenimientoBodega MantenimientoBodega;
     private Proceso_Producto Proceso_Producto;
     private ProcesoCompra Compra;
     private FacturaProveedor Factura;
@@ -108,7 +108,7 @@ public class MDIComercial extends javax.swing.JFrame {
         setTitle("Sistema Hotelero");
         setResizable(false);
 
-        jdpescritorio.setBackground(new java.awt.Color(255, 204, 0));
+        jdpescritorio.setBackground(new java.awt.Color(255, 204, 204));
 
         jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -296,62 +296,12 @@ public class MDIComercial extends javax.swing.JFrame {
 
     private void M_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M_clienteActionPerformed
 
-        Mantenimiento_Cliente = new Mantenimiento_Cliente();
-
-        jdpescritorio.add(Mantenimiento_Cliente);
-        Dimension desktopSize = jdpescritorio.getSize();
-        Dimension FrameSize = Mantenimiento_Cliente.getSize();
-        Mantenimiento_Cliente.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-        Mantenimiento_Cliente.show();
-        logo.setVisible(true);
-        Mantenimiento_Cliente.setVisible(true);
-
-        BitacoraDao BitacoraDAO = new BitacoraDao();
-
-        Bitacora Insertar = new Bitacora();
-        Insertar.setId_Usuario(Login.usuarioComercial);
-        Insertar.setAccion("Acceso ");
-
-        Insertar.setCodigoAplicacion("3001");
-        Insertar.setModulo("3000");
-
-        try {
-            BitacoraDAO.insert(Insertar);
-        } catch (UnknownHostException ex) {
-            Logger.getLogger(Aplicacion_Perfil.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
+       
 
     }//GEN-LAST:event_M_clienteActionPerformed
 
     private void M_deudorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M_deudorActionPerformed
-        Mantenimiento_Acreedor = new Mantenimiento_Deudores();
-
-        jdpescritorio.add(Mantenimiento_Acreedor);
-
-        Dimension desktopSize = jdpescritorio.getSize();
-        Dimension FrameSize = Mantenimiento_Acreedor.getSize();
-        Mantenimiento_Acreedor.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-        Mantenimiento_Acreedor.show();
-        logo.setVisible(true);
-        Mantenimiento_Acreedor.setVisible(true);
-
-        BitacoraDao BitacoraDAO = new BitacoraDao();
-
-        Bitacora Insertar = new Bitacora();
-        Insertar.setId_Usuario(Login.usuarioComercial);
-        Insertar.setAccion("Acceso  ");
-
-        Insertar.setCodigoAplicacion("3002");
-        Insertar.setModulo("3000");
-
-        try {
-            BitacoraDAO.insert(Insertar);
-        } catch (UnknownHostException ex) {
-            Logger.getLogger(Aplicacion_Perfil.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_M_deudorActionPerformed
 
     private void M_proveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M_proveedorActionPerformed
@@ -454,29 +404,7 @@ public class MDIComercial extends javax.swing.JFrame {
     }//GEN-LAST:event_cerrar_sesionMouseClicked
 
     private void M_producto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M_producto1ActionPerformed
-        MantenimientoProductos = new MantenimientoProductos();
-        jdpescritorio.add(MantenimientoProductos);
-
-        Dimension desktopSize = jdpescritorio.getSize();
-        Dimension FrameSize = MantenimientoProductos.getSize();
-        MantenimientoProductos.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-        MantenimientoProductos.show();
-        logo.setVisible(true);
-        MantenimientoProductos.setVisible(true);
-        BitacoraDao BitacoraDAO = new BitacoraDao();
-
-        Bitacora Insertar = new Bitacora();
-        Insertar.setId_Usuario(Login.usuarioComercial);
-        Insertar.setAccion("Acceso");
-
-        Insertar.setCodigoAplicacion("3003");
-        Insertar.setModulo("3000");
-
-        try {
-            BitacoraDAO.insert(Insertar);
-        } catch (UnknownHostException ex) {
-            Logger.getLogger(Aplicacion_Perfil.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
 
         // TODO add your handling code here:
     }//GEN-LAST:event_M_producto1ActionPerformed
@@ -511,29 +439,7 @@ public class MDIComercial extends javax.swing.JFrame {
 
     private void P_pedido_facturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P_pedido_facturaActionPerformed
 
-        Proceso_Factura = new Proceso_Factura();
-        jdpescritorio.add(Proceso_Factura);
-
-        Dimension desktopSize = jdpescritorio.getSize();
-        Dimension FrameSize = Proceso_Factura.getSize();
-        Proceso_Factura.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-        Proceso_Factura.show();
-        logo.setVisible(true);
-        Proceso_Factura.setVisible(true);
-        BitacoraDao BitacoraDAO = new BitacoraDao();
-
-        Bitacora Insertar = new Bitacora();
-        Insertar.setId_Usuario(Login.usuarioComercial);
-        Insertar.setAccion("Acceso");
-
-        Insertar.setCodigoAplicacion("30010");
-        Insertar.setModulo("3000");
-
-        try {
-            BitacoraDAO.insert(Insertar);
-        } catch (UnknownHostException ex) {
-            Logger.getLogger(Aplicacion_Perfil.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_P_pedido_facturaActionPerformed
 
@@ -567,29 +473,7 @@ public class MDIComercial extends javax.swing.JFrame {
 
     private void jCheckBoxMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem1ActionPerformed
         // TODO add your handling code here:
-        MantenimientoBodega = new MantenimientoBodega();
-        jdpescritorio.add(MantenimientoBodega);
-
-        Dimension desktopSize = jdpescritorio.getSize();
-        Dimension FrameSize = MantenimientoBodega.getSize();
-        MantenimientoBodega.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-        MantenimientoBodega.show();
-        logo.setVisible(true);
-        MantenimientoBodega.setVisible(true);
-        BitacoraDao BitacoraDAO = new BitacoraDao();
-
-        Bitacora Insertar = new Bitacora();
-        Insertar.setId_Usuario(Login.usuarioComercial);
-        Insertar.setAccion("Acceso");
-
-        Insertar.setCodigoAplicacion("3009");
-        Insertar.setModulo("3000");
-
-        try {
-            BitacoraDAO.insert(Insertar);
-        } catch (UnknownHostException ex) {
-            Logger.getLogger(Aplicacion_Perfil.class.getName()).log(Level.SEVERE, null, ex);
-        }
+     
     }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
 
     /**
