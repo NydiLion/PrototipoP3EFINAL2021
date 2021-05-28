@@ -56,11 +56,11 @@ public class GenerarPermisos {
             if (modulo == "Comercial") {
 
                 ejecutarPermisos.ejecutarBusqueda(usuario);
-                MDIComercial.M_venta.setVisible(false);
-                MDIComercial.M_compras.setVisible(false);
-                MDIComercial.M_inventario.setVisible(false);
+                MDIComercial.M_venta.setVisible(true);
+                MDIComercial.M_compras.setVisible(true);
+                MDIComercial.M_inventario.setVisible(true);
                 MDIComercial.P_ventas.setVisible(true);
-                MDIComercial.P_compras.setVisible(false);
+                MDIComercial.P_compras.setVisible(true);
                  MDIComercial.P_pedido_factura.setVisible(true);
                 //   MDIComercial.ProcesoInventario.setVisible(false);
                 for (int i = 0; i < ejecutarPermisos.getAplicaciones().length; i++) {

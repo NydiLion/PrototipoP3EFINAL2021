@@ -1,3 +1,4 @@
+//reutilizacion de codigo Nayre de Leon
 package Comercial.vista;
 
 import seguridad.vista.*;
