@@ -108,7 +108,7 @@ public class MDIComercial extends javax.swing.JFrame {
         setTitle("Sistema Hotelero");
         setResizable(false);
 
-        jdpescritorio.setBackground(new java.awt.Color(255, 204, 0));
+        jdpescritorio.setBackground(new java.awt.Color(255, 255, 153));
 
         jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
 

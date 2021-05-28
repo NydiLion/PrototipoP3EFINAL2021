@@ -31,10 +31,7 @@ import seguridad.vista.GenerarPermisos;
 import seguridad.vista.Login;
 import seguridad.vista.MDI_Components;
 
-/**
- *
- * @author PERSONAL
- */
+
 public class Mantenimiento_Cliente extends javax.swing.JInternalFrame {
 
     int codigoAplicacion = 3001;
@@ -175,6 +172,12 @@ public class Mantenimiento_Cliente extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
         setTitle("Mantenimieto Cliente\n");
+        try {
+            setSelected(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
+        setVisible(true);
 
         btnModificar.setText("Modificar");
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
@@ -230,13 +233,10 @@ public class Mantenimiento_Cliente extends javax.swing.JInternalFrame {
 
         JtProductos1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Id Cliente", "Cliente", "Nit", "Telefono", "Estatus Cliente"
             }
         ));
         jScrollPane1.setViewportView(JtProductos1);
