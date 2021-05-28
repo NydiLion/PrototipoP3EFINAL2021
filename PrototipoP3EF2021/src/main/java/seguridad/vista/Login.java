@@ -5,7 +5,7 @@
  */
 package seguridad.vista;
 
-import Comercial.vista.MDIComercial;
+//import Comercial.vista.MDIComercial;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import seguridad.datos.UsuarioDAO;
@@ -233,8 +233,8 @@ public class Login extends javax.swing.JFrame {
                                 
                                try {
                             usuarioComercial = txtUsuario.getText();
-                            MDIComercial menucomercial = new MDIComercial();
-                            menucomercial.setVisible(true);
+                           // MDIComercial menucomercial = new MDIComercial();
+                          //  menucomercial.setVisible(true);
                             this.dispose();
 
                         } catch (Exception e) {
